@@ -3,7 +3,7 @@ import Link from "next/link";
 import { api } from "~/utils/api";
 
 export default function Home() {
-  const candidates = api.example.candidates.useQuery({});
+  const candidates = api.candidates.getAll.useQuery({});
 
   return (
     <>
@@ -14,9 +14,8 @@ export default function Home() {
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#101F34] to-[#0C1E2F]">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-          {/* This heading can be replaced by the table of candidates */}
           <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-            Create a <span className="mr-3 text-[#007EFF]">Hirechain</span> and
+            Create a <span className="text-[#007EFF]">Hirechain</span> and
             <span className="ml-3 text-[hsl(280,100%,70%)]">T3</span> App
           </h1>
 
