@@ -16,7 +16,7 @@ The API endpoint is:
 https://app.hirechain.xyz/api/tech-test
 ```
 
-A simple GET request will return an array of JSON objects containing a list of dummy candidates. We would like you to call this API endpoint from within a tRPC procedure and one has been setup for this in the boilerplate code. There is no authentication required to call this API.
+A simple GET request will return an array of objects containing a list of dummy candidates. We would like you to call this API endpoint from within a tRPC procedure and one has been setup for this in the boilerplate code. There is no authentication required to call this API.
 
 This API is intentionally buggy, adding an extra level of complexity to the task.
 
@@ -36,7 +36,9 @@ The key features we need in the application are as follows:
 
 6. **API Data Nesting:** The API data may not always return all 50 candidates as expected due to nesting issues. Candidates might be stored in 2D arrays, several levels deep. Unravel this data to display correctly.
 
-7. **Styling:** Style the application as you see fit using Tailwind. The main focus of this test is on code quality, not UI styling.
+7. **API Response Times:** The API is inconsistent in it's response times. Sometimes it will respond immediately and other times it will take 5 seconds. This should not effect the responsiveness of the application. The user should be able to navigate between pages and refresh the data without any noticeable delay.
+
+8. **Styling:** Style the application as you see fit using Tailwind. The main focus of this test is on code quality, not UI styling.
 
 ## Getting Started
 
