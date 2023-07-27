@@ -1,28 +1,55 @@
-# Create T3 App
+# Hirechain Next.js Technical Test
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+## Introduction
 
-## What's next? How do I make an app with this?
+Welcome to the Hirechain Next.js technical test. This test is designed to examine your understanding and proficiency in handling a complex API, and setting up trpc and Next.js.
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+Our application is built over a t3 boilerplate that incorporates Next.js, Tailwind, and trpc. We have created a mock API endpoint for testing purposes, which provides a series of challenges you need to overcome.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Test Overview
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+Your task is to build a simple application that calls our provided API endpoint, and displays the results in a table. 
 
-## Learn More
+The API endpoint is:
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+```sh
+https://app.hirechain.xyz/api/tech-test 
+```
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+This API is intentionally buggy, adding an extra level of complexity to the task.
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+The key features we need in the application are as follows:
 
-## How do I deploy this?
+1. **Display API Data:** Fetch the data from the API and display it in a table on the 'candidates.tsx' page.
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+2. **Table Configuration:** The table should be sortable by all of the columns and there should be a column for each key in the candidate objects returned by the API.
+
+3. **Candidate Details:** Each row in the table represents a candidate. Clicking on a row should take the user to a page displaying the details of that candidate.
+
+4. **Pagination:** The table must show 10 rows per page, with the total list including 50 candidates.
+
+5. **API Issues Handling:** The API may occasionally throw a 500 error or a 401 error. Implement appropriate responses within the app.
+   - **500 Error:** Display an icon on the page (toast, icon in header, etc) to indicate the stale data and that the system has attempted to refresh.
+   - **401 Error:** Redirect the user to a dummy login page. This page should include a button to take them back to the candidates page.
+
+6. **API Data Nesting:** The API data may not always return all 50 candidates as expected due to nesting issues. Candidates might be stored in 2D arrays, several levels deep. Unravel this data to display correctly.
+
+7. **Styling:** Style the application as you see fit using Tailwind. The main focus of this test is on code quality, not UI styling.
+
+## Getting Started
+
+### Starting The Test
+
+To start the test, please fork the repository and create a new branch for your work.
+
+Once your work is complete, add `@bkrhub` to the repository, create a pull request, and request code approval.
+
+**NOTE:** Please, do not merge the PR into the main branch.
+
+## Conclusion
+
+This is a great opportunity to demonstrate your capabilities with complex API handling, Next.js, trpc, and basic UI design.
+
+Good luck with your test, and have fun!
+
+---
